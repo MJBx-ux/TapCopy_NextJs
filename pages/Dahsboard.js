@@ -61,6 +61,7 @@ function Dahsboard({ name, uid }) {
           direction="row"
           justifyContent="space-between"
           alignItems="center"
+          mt={{ base: "40px", md: "20px", lg: "10px" }}
         >
           <Text fontSize="3xl" fontWeight="bold" mr="0.5em">
             <span style={{ color: "#FF6A3D" }}>👋Hey,</span>
@@ -89,7 +90,7 @@ function Dahsboard({ name, uid }) {
         {uid ? <InputModal Uid={uid}></InputModal> : null}
 
         <Divider m="2em 0" />
-        <Flex wrap="wrap" justifyContent="space-between">
+        <Flex wrap="wrap" justifyContent="space-between" borderRadius="10px">
           {" "}
           {objData ? (
             objData.map((i) => {

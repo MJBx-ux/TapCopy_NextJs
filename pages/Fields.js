@@ -34,10 +34,16 @@ function Fields(prop) {
 
   return (
     <Flex direction="column" mb="1em">
-      <Text>{title} </Text>
+      <Text fontWeight="semibold">{title} </Text>
       <Flex direction="row">
         <InputGroup size="md">
-          <Input pr="4.5rem" value={val} readOnly="true" color="grey" />
+          <Input
+            pr="4.5rem"
+            fontWeight="bold"
+            value={val}
+            readOnly="true"
+            color="grey"
+          />
           <InputRightElement width="4.5rem">
             <Button
               h="1.75rem"

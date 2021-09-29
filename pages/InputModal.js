@@ -63,7 +63,7 @@ function InputModal({ Uid }) {
 
       <Modal isOpen={isOpen} onClose={onClose}>
         <ModalOverlay />
-        <ModalContent>
+        <ModalContent bg="#1a2237" color="white">
           <ModalHeader>Add New Data</ModalHeader>
           <ModalCloseButton />
           <ModalBody pb={6}>
@@ -97,7 +97,7 @@ function InputModal({ Uid }) {
             >
               Add
             </Button>
-            <Button id="clBtn" onClick={onClose}>
+            <Button id="clBtn" onClick={onClose} bg="red.600">
               Cancel
             </Button>
           </ModalFooter>
