@@ -1,8 +1,8 @@
-import { auth } from "./auth";
+import { auth } from "../components/auth";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import { useEffect, useState } from "react";
-import Login from "./login";
-import Dahsboard from "./Dahsboard";
+import Login from "../components/login";
+import Dahsboard from "../components/Dahsboard";
 
 export default function Home() {
   const [islogin, setislogin] = useState(false);
