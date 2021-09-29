@@ -33,8 +33,8 @@ function Dahsboard({ name, uid }) {
     }
 
     onSnapshot(doc(db, "users", uid), (doc) => {
-      console.log("Current data: ", doc.data().arr);
-      setobjData(doc.data().arr);
+      console.log("Current data: ", doc.data());
+      doc.data() ? setobjData(doc.data().arr) : null;
     });
   }, []);
 
