@@ -36,7 +36,7 @@ function Dahsboard({ name, uid }) {
       console.log("Current data: ", doc.data());
       doc.data() ? setobjData(doc.data().arr) : null;
     });
-  });
+  }, []);
 
   const handleAdd = () => {};
   return (
