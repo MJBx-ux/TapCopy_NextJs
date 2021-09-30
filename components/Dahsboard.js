@@ -105,6 +105,7 @@ function Dahsboard({ name, uid }) {
                 <Input
                   variant="solid"
                   placeholder="search"
+                  color="black"
                   onChange={(e) => {
                     setsearchTerm(e.target.value);
                   }}
