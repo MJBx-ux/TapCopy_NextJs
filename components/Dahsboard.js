@@ -9,9 +9,13 @@ import { db } from "./auth";
 import { async } from "@firebase/util";
 import { useEffect, useState } from "react";
 import InputModal from "./InputModal";
+import { Input, InputGroup, InputRightElement } from "@chakra-ui/input";
+import { FaSearch } from "react-icons/fa";
+import { BsCardHeading } from "react-icons/bs";
 
 function Dahsboard({ name, uid }) {
   const [objData, setobjData] = useState([]);
+  const [searchTerm, setsearchTerm] = useState("");
 
   const fetch = async () => {
     const docRef = doc(db, "users", uid);
@@ -88,20 +92,64 @@ function Dahsboard({ name, uid }) {
           Add fields
         </Button> */}
         {uid ? <InputModal Uid={uid}></InputModal> : null}
+        <Divider m="2em 0 1em 0" />
 
-        <Divider m="2em 0" />
         <Flex wrap="wrap" justifyContent="space-between" borderRadius="10px">
-          {" "}
           {objData ? (
-            objData.map((i) => {
-              return (
-                <>
-                  <Fields title={i.title} val={i.value}></Fields>
-                </>
-              );
-            })
+            <>
+              {" "}
+              <InputGroup mb="1em">
+                <InputRightElement pointerEvents="none">
+                  <FaSearch color="black"></FaSearch>
+                </InputRightElement>
+                <Input
+                  variant="solid"
+                  placeholder="search"
+                  onChange={(e) => {
+                    setsearchTerm(e.target.value);
+                  }}
+                ></Input>
+              </InputGroup>
+              {objData
+                .filter((val) => {
+                  if (searchTerm == "") {
+                    return val;
+                  } else if (
+                    val.title
+                      .toLowerCase()
+                      .includes(searchTerm.toLocaleLowerCase())
+                  ) {
+                    return val;
+                  }
+                })
+                .map((i) => {
+                  return (
+                    <>
+                      <Fields title={i.title} val={i.value}></Fields>
+                    </>
+                  );
+                })}
+            </>
           ) : (
-            <Text>Opps! Your Store is Empty</Text>
+            <Flex
+              direction="column"
+              justifyContent="center"
+              width="100%"
+              textAlign="center"
+            >
+              <Flex
+                m="20px auto"
+                fontSize="3em"
+                bg="grey"
+                p="30px"
+                borderRadius="50%"
+              >
+                <BsCardHeading></BsCardHeading>
+              </Flex>
+              <Text fontWeight="semibold" color="grey">
+                Your Store is Empty
+              </Text>
+            </Flex>
           )}
         </Flex>
       </Flex>
