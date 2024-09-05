@@ -1,34 +1,47 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+TapCopy - Quick Text Copy for Mobile Users
+TapCopy is a simple and lightweight React web app designed to store text data and make it easy to copy with just a click or tap. It’s especially useful for mobile users who frequently fill out forms or need to copy-paste information quickly.
 
-## Getting Started
+Features
+Store text snippets: Save your frequently used text, such as email addresses, phone numbers, or any other text data.
+One-tap copy: Copy text to your clipboard with a single tap or click.
+Mobile-friendly: Designed with mobile users in mind for quick and easy use on the go.
+Demo
+[[Link to the live demo](https://tap-copy-next-js.vercel.app/)]
 
-First, run the development server:
+Getting Started
+Prerequisites
+Ensure you have the following installed:
 
-```bash
-npm run dev
-# or
-yarn dev
-```
+Node.js (version 12 or higher)
+npm or yarn
+Installation
+Clone the repository:
+bash
+Copy code
+git clone this repo
+Navigate to the project folder:
+bash
+Copy code
+cd tapcopy
+Install the dependencies:
+bash
+Copy code
+npm install
+Start the development server:
+bash
+Copy code
+npm start
+The app will be available at http://localhost:3000.
+Usage
+Add your frequently used text snippets.
+Tap or click on the copy button next to any text.
+The text is instantly copied to your clipboard for easy pasting.
+Technologies Used
+React: Frontend library for building the UI.
+CSS: For styling the app.
+Clipboard API: Used to copy text data.
+Contributing
+Contributions are welcome! Feel free to open an issue or submit a pull request if you have suggestions for improvements or bug fixes.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
-
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
-
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+License
+No license yet.
